@@ -9,7 +9,7 @@ public class FourDigitsType extends AbstractWordType{
 
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return fixednumbers.convertToWords(mainNumber/divisor) + " thousand ";
+		return fixednumbers.convertToWords(mainNumber) + " thousand ";
 	}
 
 	@Override

@@ -8,7 +8,7 @@ public class NineDigitsType extends AbstractWordType{
 
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return new ThreeDigitsType().convertToWords(mainNumber/divisor) + " million ";
+		return new ThreeDigitsType().convertToWords(mainNumber) + " million ";
 	}
 
 	@Override

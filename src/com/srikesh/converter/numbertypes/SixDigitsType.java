@@ -8,7 +8,7 @@ public class SixDigitsType extends AbstractWordType{
 
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return new ThreeDigitsType().convertToWords(mainNumber/divisor) + " thousand ";
+		return new ThreeDigitsType().convertToWords(mainNumber) + " thousand ";
 	}
 
 	@Override

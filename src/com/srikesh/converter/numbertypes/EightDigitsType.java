@@ -8,7 +8,7 @@ public class EightDigitsType extends AbstractWordType{
 
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return new TwoDigitsType().convertToWords(mainNumber/divisor) + " million ";
+		return new TwoDigitsType().convertToWords(mainNumber) + " million ";
 	}
 
 	@Override

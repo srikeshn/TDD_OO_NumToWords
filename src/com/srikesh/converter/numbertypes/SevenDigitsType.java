@@ -9,7 +9,7 @@ public class SevenDigitsType extends AbstractWordType{
 
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return fixedNumbers.convertToWords(mainNumber/divisor) + " million ";
+		return fixedNumbers.convertToWords(mainNumber) + " million ";
 	}
 
 	@Override

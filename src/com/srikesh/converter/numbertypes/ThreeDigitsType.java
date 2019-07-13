@@ -17,7 +17,7 @@ public class ThreeDigitsType extends AbstractWordType{
 	}
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return fixednumber.convertToWords(mainNumber/divisor) + " hundred";
+		return fixednumber.convertToWords(mainNumber) + " hundred";
 	}
 
 	@Override

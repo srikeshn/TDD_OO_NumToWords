@@ -8,7 +8,7 @@ public class FiveDigitsType extends AbstractWordType{
 
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
-		return new TwoDigitsType().convertToWords(mainNumber/divisor) + " thousand ";
+		return new TwoDigitsType().convertToWords(mainNumber) + " thousand ";
 	}
 
 	@Override
