@@ -1,8 +1,8 @@
 package com.srikesh.converter.numbertypes;
 
-import static org.junit.Assert.assertFalse;
+import static com.srikesh.converter.utils.RangeValidationUtil.invalidRangeCheck;
+import static com.srikesh.converter.utils.RangeValidationUtil.validRangeCheck;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
 
@@ -11,16 +11,14 @@ public class SixDigitsTest {
 
 	@Test
 	public void testShouldMatchNumbersInRange() throws Exception {
-		assertFalse(resource.isValidRange(9));
-		assertFalse(resource.isValidRange(10));
-		assertFalse(resource.isValidRange(999));
-		assertFalse(resource.isValidRange(1000));
-		assertFalse(resource.isValidRange(10000));
-		assertTrue(resource.isValidRange(100000));
+		invalidRangeCheck(resource, 9, 10, 999, 9999, 99999);
+		validRangeCheck(resource, 100000, 999999, 234543);
 	}
-	
+
 	@Test
 	public void convertSixDigitNumberTest() {
-		assertEquals("nine hundred and ninety nine thousand nine hundred and ninety nine", resource.convertToWords(999999));
+		assertEquals("nine hundred and ninety nine thousand nine hundred and ninety nine",
+				resource.convertToWords(999999));
 	}
+
 }

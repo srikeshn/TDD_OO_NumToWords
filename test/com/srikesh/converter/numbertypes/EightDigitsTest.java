@@ -1,23 +1,20 @@
 package com.srikesh.converter.numbertypes;
 
-import static org.junit.Assert.assertFalse;
+import static com.srikesh.converter.utils.RangeValidationUtil.invalidRangeCheck;
+import static com.srikesh.converter.utils.RangeValidationUtil.validRangeCheck;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
 
 public class EightDigitsTest {
 	private final EightDigitsType resource = new EightDigitsType();
+
 	@Test
 	public void testShouldMatchNumbersInRange() throws Exception {
-		assertFalse(resource.isValidRange(9));
-		assertFalse(resource.isValidRange(10));
-		assertFalse(resource.isValidRange(999));
-		assertFalse(resource.isValidRange(10000));
-		assertFalse(resource.isValidRange(100000));
-		assertTrue(resource.isValidRange(99999999));
+		invalidRangeCheck(resource, 9, 10, 999, 10000, 1000000);
+		validRangeCheck(resource, 10000000, 99999999, 75693475);
 	}
-	
+
 	@Test
 	public void convertSixDigitNumberTest() {
 		assertEquals("ten million", resource.convertToWords(10000000));
