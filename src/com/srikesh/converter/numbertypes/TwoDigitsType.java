@@ -9,10 +9,11 @@ public class TwoDigitsType extends AbstractWordType{
 
 	@Override
 	public String convertToWords(Integer number) {
+		// return the word if it is a fixed number word
 		if(fixedNumbers.isValidRange(number))
 			return fixedNumbers.convertToWords(number);
 		else 
-			return super.convertToWords(number);
+			return super.convertToWords(number); 
 	}
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {

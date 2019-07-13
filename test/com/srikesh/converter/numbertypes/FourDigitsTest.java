@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.Test;
 
 public class FourDigitsTest {
-	private final FourDigitType resource = new FourDigitType();
+	private final FourDigitsType resource = new FourDigitsType();
 	
 	@Test
 	public void testShouldMatchNumbersInRange() throws Exception {

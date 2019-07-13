@@ -9,8 +9,8 @@ import java.util.Optional;
 import com.srikesh.converter.numbertypes.AbstractWordType;
 import com.srikesh.converter.numbertypes.BaseWordType;
 import com.srikesh.converter.numbertypes.EightDigitsType;
-import com.srikesh.converter.numbertypes.FiveDigitType;
-import com.srikesh.converter.numbertypes.FourDigitType;
+import com.srikesh.converter.numbertypes.FiveDigitsType;
+import com.srikesh.converter.numbertypes.FourDigitsType;
 import com.srikesh.converter.numbertypes.NineDigitsType;
 import com.srikesh.converter.numbertypes.SevenDigitsType;
 import com.srikesh.converter.numbertypes.SixDigitsType;
@@ -21,7 +21,7 @@ import com.srikesh.converter.numbertypes.UnknownType;
 public class NumberToWordsConverter {
 
 	private final Collection<? extends AbstractWordType> numberTypes = Arrays.asList(new TwoDigitsType(),
-			new ThreeDigitsType(), new FourDigitType(), new FiveDigitType(), new SixDigitsType(), new SevenDigitsType(),
+			new ThreeDigitsType(), new FourDigitsType(), new FiveDigitsType(), new SixDigitsType(), new SevenDigitsType(),
 			new EightDigitsType(), new NineDigitsType());
 
 	public String convertToWords(Integer number) {

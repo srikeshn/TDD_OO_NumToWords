@@ -1,8 +1,8 @@
 package com.srikesh.converter.numbertypes;
 
-public class FiveDigitType extends AbstractWordType{
+public class FiveDigitsType extends AbstractWordType{
 
-	public FiveDigitType() {
+	public FiveDigitsType() {
 		super(new NumberRange(10000, 99999), 1000);
 	}
 

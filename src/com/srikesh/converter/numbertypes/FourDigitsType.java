@@ -1,9 +1,9 @@
 package com.srikesh.converter.numbertypes;
 
-public class FourDigitType extends AbstractWordType{
+public class FourDigitsType extends AbstractWordType{
 	private final FixedNumbers fixednumbers = new FixedNumbers();
 
-	public FourDigitType() {
+	public FourDigitsType() {
 		super(new NumberRange(1000, 9999), 1000);
 	}
 
