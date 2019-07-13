@@ -3,6 +3,9 @@ package com.srikesh.converter.utils;
 public class StringUtils {
 
 	public static Integer sanitize(String input) {
-		return Integer.parseInt(input.replace(",", ""));
+		input = input.replace(",", "");
+		if(input.length() > 9 || input.contains("."))
+			throw new RuntimeException("unsupported number, supported range is 0 - 999999999 and without decimals");
+		return Integer.parseInt(input);
 	}
 }
