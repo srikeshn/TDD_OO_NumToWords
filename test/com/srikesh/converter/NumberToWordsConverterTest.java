@@ -63,7 +63,14 @@ public class NumberToWordsConverterTest {
 		assertEquals("99999999 = ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(99999999));
 	}
 	@Test
+	public void NineDigitRangeTest() {
+		assertEquals("100000000 = one hundred million", new NumberToWordsConverter().convertToWords(100000000));
+		assertEquals("211234567 = two hundred and eleven million two hundred and thirty four thousand five hundred and sixty seven", new NumberToWordsConverter().convertToWords(211234567));
+		assertEquals("580000800 = five hundred and eighty million eight hundred", new NumberToWordsConverter().convertToWords(580000800));
+		assertEquals("999999999 = nine hundred and ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(999999999));
+	}
+	@Test
 	public void outOfRangeTest() {
-		assertEquals("100000000 = unable to convert 100000000 to words", new NumberToWordsConverter().convertToWords(100000000));
+		assertEquals("1000000000 = unable to convert 1000000000 to words", new NumberToWordsConverter().convertToWords(1000000000));
 	}
 }
