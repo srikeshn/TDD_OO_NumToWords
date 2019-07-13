@@ -40,7 +40,15 @@ public class NumberToWordsConverterTest {
 	
 	}
 	@Test
+	public void SixDigitRangeTest() {
+		assertEquals("100000 = one hundred thousand", new NumberToWordsConverter().convertToWords(100000));
+		assertEquals("123456 = one hundred and twenty three thousand four hundred and fifty six", new NumberToWordsConverter().convertToWords(123456));
+		assertEquals("56040 = fifty six thousand fourty", new NumberToWordsConverter().convertToWords(56040));
+		assertEquals("999999 = nine hundred and ninety nine thousand nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(999999));
+	
+	}
+	@Test
 	public void outOfRangeTest() {
-		assertEquals("100000 = unable to convert 100000 to words", new NumberToWordsConverter().convertToWords(100000));
+		assertEquals("1000000 = unable to convert 1000000 to words", new NumberToWordsConverter().convertToWords(1000000));
 	}
 }
