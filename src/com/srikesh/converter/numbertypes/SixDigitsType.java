@@ -1,8 +1,8 @@
 package com.srikesh.converter.numbertypes;
 
-public class SixDigitType extends AbstractWordType{
+public class SixDigitsType extends AbstractWordType{
 
-	public SixDigitType() {
+	public SixDigitsType() {
 		super(new NumberRange(100000, 999999), 1000);
 	}
 
