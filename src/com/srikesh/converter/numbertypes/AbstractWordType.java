@@ -16,9 +16,9 @@ public abstract class AbstractWordType implements BaseWordType{
  
  @Override
  public String convertToWords(Integer number) {
-	 range.checkNumberExceedMax(number);
-	 int remainder = number % divisor;
-	 int mainNumber = number - remainder;
+	 range.checkNumberExceedMax(number); // throws exception if number exceeds range
+	 int remainder = number % divisor; 
+	 int mainNumber = number - remainder; // this operation makes the remainder digits zeros
 	 String mainNumberInWords = getMainNumberInWords(mainNumber);
 	 String remainderInWords = getRemainderInWords(remainder);
 	 StringBuilder convertedWord = new StringBuilder();
@@ -31,7 +31,7 @@ public abstract class AbstractWordType implements BaseWordType{
 	 return convertedWord.toString().trim();
 	 
  }
- 
+ // these methods are abstract because the operations depend on NumberType i.e no of digits
  abstract protected String getMainNumberInWords(Integer mainNumber);
 
  abstract protected String getRemainderInWords(Integer remainder); 

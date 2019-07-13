@@ -3,7 +3,7 @@ package com.srikesh.converter.numbertypes;
 public class SixDigitsType extends AbstractWordType{
 
 	public SixDigitsType() {
-		super(new NumberRange(100000, 999999), 1000);
+		super(new NumberRange(100000, 999999), 1000); // Since we break number into set of three digits, divisor is 1000
 	}
 
 	@Override

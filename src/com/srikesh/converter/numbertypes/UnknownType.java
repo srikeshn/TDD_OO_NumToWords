@@ -4,7 +4,7 @@ public class UnknownType implements BaseWordType{
 
 	@Override
 	public boolean isValidRange(Integer number) {
-		return false;
+		return false; // Since we don't convert unknown number type, we always say invalid range.
 	}
 
 	@Override
