@@ -15,4 +15,12 @@ public class NumberToWordsConverterTest {
 		assertEquals("44 = fourty four", new NumberToWordsConverter().convertToWords(44));
 		assertEquals("99 = ninety nine", new NumberToWordsConverter().convertToWords(99));
 	}
+	
+	@Test
+	public void ThreeDigitRangeTest() {
+		assertEquals("101 = one hundred and one", new NumberToWordsConverter().convertToWords(101));
+		assertEquals("145 = one hundred and fourty five", new NumberToWordsConverter().convertToWords(145));
+		assertEquals("200 = two hundred", new NumberToWordsConverter().convertToWords(200));
+		assertEquals("999 = nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(999));
+	}
 }
