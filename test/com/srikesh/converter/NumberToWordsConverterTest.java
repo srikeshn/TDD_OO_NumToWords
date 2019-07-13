@@ -32,7 +32,15 @@ public class NumberToWordsConverterTest {
 		assertEquals("9999 = nine thousand nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(9999));
 	}
 	@Test
+	public void FiveDigitRangeTest() {
+		assertEquals("10000 = ten thousand", new NumberToWordsConverter().convertToWords(10000));
+		assertEquals("12345 = twelve thousand three hundred and fourty five", new NumberToWordsConverter().convertToWords(12345));
+		assertEquals("21000 = twenty one thousand", new NumberToWordsConverter().convertToWords(21000));
+		assertEquals("99999 = ninety nine thousand nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(99999));
+	
+	}
+	@Test
 	public void outOfRangeTest() {
-		assertEquals("10000 = unable to convert 10000 to words", new NumberToWordsConverter().convertToWords(10000));
+		assertEquals("100000 = unable to convert 100000 to words", new NumberToWordsConverter().convertToWords(100000));
 	}
 }

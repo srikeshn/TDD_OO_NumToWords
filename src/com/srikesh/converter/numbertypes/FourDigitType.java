@@ -7,9 +7,6 @@ public class FourDigitType extends AbstractWordType{
 		super(new NumberRange(1000, 9999), 1000);
 	}
 
-	public String convertToWords(Integer number) {
-		return super.convertToWords(number);
-	}
 	@Override
 	protected String getMainNumberInWords(Integer mainNumber) {
 		return fixednumbers.convertToWords(mainNumber/divisor) + " thousand ";
