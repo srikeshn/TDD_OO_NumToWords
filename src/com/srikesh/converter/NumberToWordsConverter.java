@@ -2,6 +2,7 @@ package com.srikesh.converter;
 
 import com.srikesh.converter.numbertypes.AbstractWordType;
 import com.srikesh.converter.numbertypes.BaseWordType;
+import com.srikesh.converter.numbertypes.EightDigitsType;
 import com.srikesh.converter.numbertypes.FiveDigitType;
 import com.srikesh.converter.numbertypes.FourDigitType;
 import com.srikesh.converter.numbertypes.SevenDigitsType;
@@ -25,7 +26,8 @@ public class NumberToWordsConverter {
 			new FourDigitType(),
 			new FiveDigitType(),
 			new SixDigitsType(),
-			new SevenDigitsType());
+			new SevenDigitsType(),
+			new EightDigitsType());
 
 	public String convertToWords(Integer number) {
 		if(number == 0) 

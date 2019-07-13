@@ -56,7 +56,14 @@ public class NumberToWordsConverterTest {
 	
 	}
 	@Test
+	public void EightDigitRangeTest() {
+		assertEquals("10000000 = ten million", new NumberToWordsConverter().convertToWords(10000000));
+		assertEquals("11234567 = eleven million two hundred and thirty four thousand five hundred and sixty seven", new NumberToWordsConverter().convertToWords(11234567));
+		assertEquals("80000800 = eighty million eight hundred", new NumberToWordsConverter().convertToWords(80000800));
+		assertEquals("99999999 = ninety nine million nine hundred and ninety nine thousand nine hundred and ninety nine", new NumberToWordsConverter().convertToWords(99999999));
+	}
+	@Test
 	public void outOfRangeTest() {
-		assertEquals("10000000 = unable to convert 10000000 to words", new NumberToWordsConverter().convertToWords(10000000));
+		assertEquals("100000000 = unable to convert 100000000 to words", new NumberToWordsConverter().convertToWords(100000000));
 	}
 }
